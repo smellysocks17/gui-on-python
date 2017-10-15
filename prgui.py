@@ -1,5 +1,4 @@
 import tkinter
-import random
 
 #prime part
 
