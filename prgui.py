@@ -19,10 +19,12 @@ def pri(n):
      #exceptions
         if n in [2,3]:
             print ("yes\n\n")
+            lab.configure(text='yes\n')
             
 
         elif (n%2==0):
             print ("no\n\n")
+            lab.configure(text='no\n')
             
 
 
@@ -33,10 +35,12 @@ def pri(n):
                 if (n%i==0.0):
                     print (n/i,"here")
                     print ("no\n\n")
+                    lab.configure(text='no\n')
                     break
                     
                 elif (i==m-1) or (i==m-2):
                     print ("yes\n\n")
+                    lab.configure(text='yes\n')
                     break
                 
     pr(n)
@@ -49,13 +53,14 @@ def pri(n):
 win = tkinter.Tk()
 
 win.title('prime')
-win.geometry('250x85')
-lab=tkinter.Label(win,text='click and enter number above',bg='#0099ff', font = '11')
+win.geometry('250x170')
+lab=tkinter.Label(win,text='enter number above to check \n if number is prime',bg='#ffffff', font = ('Helvetica', 13), justify = 'center')
 
+ 
 #text entry and pack to window
 
-ent=tkinter.Entry(win)
-ent.pack()
+ent=tkinter.Entry(win, font=('DejaVu Sans',15), justify = 'right', bg='#ffffff')
+
 
 #defining button command
 
@@ -63,21 +68,24 @@ def butpr():
     a=int(ent.get())
     pri(a)
 
-but=tkinter.Button(win,text='check', font = '11', command = butpr,fg='#a1dbcf',bg='#383a39')
+but1=tkinter.Button(win,text='check', font = ('Helvetica', 13), justify = 'right', command = butpr,fg='#000000',bg='#ffffff', width = 9)
+but2=tkinter.Button(win, text='quit', font = ('Helvetica',13), command = win.destroy, fg='#000000',bg='#ffffff', width = 9)
 
 #packing all
 
+
+ent.pack(fill=tkinter.X)
+but1.pack()
 lab.pack()
-ent.pack()
-but.pack()
+but2.pack()
 
 #background
-win.configure(background='#a1bdcd')
+win.configure(background='#ffffff')
 
 
 win.mainloop()
 
 
-
+ 
 
 
