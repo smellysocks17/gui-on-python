@@ -43,7 +43,7 @@ def pri(n):
 
 
 
-#create a new window
+#creating a new window
 
 win = tkinter.Tk()
 
@@ -52,12 +52,12 @@ win.geometry('250x170')
 lab=tkinter.Label(win,text='enter number above to check \n if number is prime',bg='#ffffff', font = ('Helvetica', 13), justify = 'center')
 
  
-#text entry and pack to window
+#text entry space
 
 ent=tkinter.Entry(win, font=('DejaVu Sans',15), justify = 'right', bg='#ffffff')
 
 
-#defining button command
+#defining buttons and commands
 
 def butpr():
     a=int(ent.get())
@@ -66,8 +66,8 @@ def butpr():
 but1=tkinter.Button(win,text='check', font = ('Helvetica', 13), justify = 'right', command = butpr,fg='#000000',bg='#ffffff', width = 9)
 but2=tkinter.Button(win, text='quit', font = ('Helvetica',13), command = win.destroy, fg='#000000',bg='#ffffff', width = 9)
 
-#packing all
 
+#packing all
 
 ent.pack(fill=tkinter.X)
 but1.pack()
@@ -77,7 +77,7 @@ but2.pack()
 #background
 win.configure(background='#ffffff')
 
-
+#mainlooping window
 win.mainloop()
 
 
