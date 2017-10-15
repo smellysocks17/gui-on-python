@@ -18,12 +18,10 @@ def pri(n):
 
      #exceptions
         if n in [2,3]:
-            print ("yes\n\n")
             lab.configure(text='yes\n')
             
 
         elif (n%2==0):
-            print ("no\n\n")
             lab.configure(text='no\n')
             
 
@@ -34,12 +32,10 @@ def pri(n):
                 print ("count: ",i)
                 if (n%i==0.0):
                     print (n/i,"here")
-                    print ("no\n\n")
                     lab.configure(text='no\n')
                     break
                     
                 elif (i==m-1) or (i==m-2):
-                    print ("yes\n\n")
                     lab.configure(text='yes\n')
                     break
                 
